@@ -1,0 +1,15 @@
+1
+00:00:01,750 --> 00:00:04,750
+Welcome to the subtitle timing demo.
+
+2
+00:00:04,250 --> 00:00:05,750
+This caption overlaps the first one.
+
+3
+00:00:05,950 --> 00:00:06,250
+Too many words for this very short caption.
+
+4
+00:00:06,750 --> 00:00:08,750
+مرحبا بكم

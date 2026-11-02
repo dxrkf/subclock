@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>SubClock timing review</title><style>body{font:17px system-ui;background:#101827;color:#e2e8f0;max-width:1100px;margin:50px auto;padding:24px}h1{color:#5eead4}table{border-collapse:collapse;width:100%}td,th{padding:12px;border-bottom:1px solid #334155;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#1b293e;padding:20px;border-radius:12px}</style><h1>SubClock / subtitle timing review</h1><p>4 cues · 0 errors · 4 warnings</p><table><tr><th>Cue</th><th>Level</th><th>Rule</th><th>Detail</th></tr><tr><td>2</td><td>warning</td><td>FAST_READING</td><td>24.00 characters/s exceeds 20</td></tr><tr><td>3</td><td>warning</td><td>SHORT_DURATION</td><td>Duration 300 ms is below 500 ms</td></tr><tr><td>3</td><td>warning</td><td>FAST_READING</td><td>143.33 characters/s exceeds 20</td></tr><tr><td>2</td><td>warning</td><td>OVERLAP</td><td>Overlaps cue 1 by 500 ms</td></tr></table><h2>Full report</h2><pre>{
+  &quot;format&quot;: &quot;subclock-report-v1&quot;,
+  &quot;cue_count&quot;: 4,
+  &quot;errors&quot;: 0,
+  &quot;warnings&quot;: 4,
+  &quot;findings&quot;: [
+    {
+      &quot;cue&quot;: 2,
+      &quot;severity&quot;: &quot;warning&quot;,
+      &quot;rule&quot;: &quot;FAST_READING&quot;,
+      &quot;detail&quot;: &quot;24.00 characters/s exceeds 20&quot;
+    },
+    {
+      &quot;cue&quot;: 3,
+      &quot;severity&quot;: &quot;warning&quot;,
+      &quot;rule&quot;: &quot;SHORT_DURATION&quot;,
+      &quot;detail&quot;: &quot;Duration 300 ms is below 500 ms&quot;
+    },
+    {
+      &quot;cue&quot;: 3,
+      &quot;severity&quot;: &quot;warning&quot;,
+      &quot;rule&quot;: &quot;FAST_READING&quot;,
+      &quot;detail&quot;: &quot;143.33 characters/s exceeds 20&quot;
+    },
+    {
+      &quot;cue&quot;: 2,
+      &quot;severity&quot;: &quot;warning&quot;,
+      &quot;rule&quot;: &quot;OVERLAP&quot;,
+      &quot;detail&quot;: &quot;Overlaps cue 1 by 500 ms&quot;
+    }
+  ],
+  &quot;cues&quot;: [
+    {
+      &quot;cue&quot;: 1,
+      &quot;start_ms&quot;: 1000,
+      &quot;end_ms&quot;: 4000,
+      &quot;duration_ms&quot;: 3000,
+      &quot;characters&quot;: 36,
+      &quot;cps&quot;: 12.0,
+      &quot;text&quot;: &quot;Welcome to the subtitle timing demo.&quot;
+    },
+    {
+      &quot;cue&quot;: 2,
+      &quot;start_ms&quot;: 3500,
+      &quot;end_ms&quot;: 5000,
+      &quot;duration_ms&quot;: 1500,
+      &quot;characters&quot;: 36,
+      &quot;cps&quot;: 24.0,
+      &quot;text&quot;: &quot;This caption overlaps the first one.&quot;
+    },
+    {
+      &quot;cue&quot;: 3,
+      &quot;start_ms&quot;: 5200,
+      &quot;end_ms&quot;: 5500,
+      &quot;duration_ms&quot;: 300,
+      &quot;characters&quot;: 43,
+      &quot;cps&quot;: 143.33,
+      &quot;text&quot;: &quot;Too many words for this very short caption.&quot;
+    },
+    {
+      &quot;cue&quot;: 4,
+      &quot;start_ms&quot;: 6000,
+      &quot;end_ms&quot;: 8000,
+      &quot;duration_ms&quot;: 2000,
+      &quot;characters&quot;: 9,
+      &quot;cps&quot;: 4.5,
+      &quot;text&quot;: &quot;مرحبا بكم&quot;
+    }
+  ],
+  &quot;thresholds&quot;: {
+    &quot;max_cps&quot;: 20.0,
+    &quot;min_ms&quot;: 500,
+    &quot;gap_ms&quot;: 5000
+  }
+}</pre></html>
